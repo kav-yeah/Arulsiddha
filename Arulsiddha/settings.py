@@ -45,7 +45,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 INSTALLED_APPS = [
     'Home',
     'blog',
-    'livesync',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
