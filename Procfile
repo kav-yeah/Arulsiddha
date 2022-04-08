@@ -1,1 +1,1 @@
-web : gunicorn Arulsiddha.wsgi
+web: gunicorn Arulsiddha.wsgi
