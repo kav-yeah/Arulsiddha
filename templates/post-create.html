@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="padding"></div>
+<div class="details">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="button" class="btn btn-light">Create</button>
+    </form>
+    
+</div>
+
+
+{% endblock %}

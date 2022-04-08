@@ -1,0 +1,342 @@
+*{
+   box-sizing: border-box;
+   margin:0;
+   padding:0;
+   background-color: linen;
+}
+.container{
+    width:100%;
+    max-width: 120rem;
+    margin:auto;
+    padding:0 1.5rem;
+}
+/* -------------------------------------header------------------------------------ */
+.logo{
+    margin: auto;
+    display : flex;
+    border: 1px solid gray;
+    width:350px;
+    gap:15px;
+    margin-top: 30px;
+}
+.title{
+    font-family: 'Josefin Slab', serif;
+    align-self: center;
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    color: darkolivegreen;
+    letter-spacing: 2px;
+}
+.logoimg{
+    width:fit-content;
+    height:90px;
+    padding: 5px;
+    align-self: center;  
+}
+
+/*------------------------------------navbar------------------------------------------ */
+.nav ul{
+    margin:auto;
+    display:flex;
+    gap:80px;
+}
+
+.nav ul a{
+    text-decoration: none;
+    list-style: none;
+    border: 2px solid gray;
+    padding:5px;
+    color: darkolivegreen;
+    font-weight: bold;
+    font-size: medium;
+    padding-left:10px;padding-right:10px;
+}
+
+.nav ul a:hover{
+    font-weight: bolder; 
+    color:forestgreen;  
+    border-radius: .5;
+    border: 2px double black;
+}
+/* ----------------------------------------Grid---------------------------------------------------------- */
+.padding{
+    padding-top: 50px;
+}
+.grid-item img{
+    max-width: 100%;
+    height:auto;
+}
+.grid{
+    margin:0 0.65rem;
+    overflow: hidden;
+    display: block;
+}
+
+.grid-item{
+    height:auto;
+    margin:0.5rem;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,0.8);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0; color:#ffffff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing:2px;
+    transform: translateY(20px);
+   transition: all 0.40s;
+}
+.overlay:hover{
+    opacity: 1; transform: translateY(0);
+}
+/* .overlay > *{
+   transform: translateY(20px);
+   transition: transform 0.25s;
+}
+.overlay:hover > *{
+    transform: translateY(0);
+} */
+.grid img{
+    width:100%;
+    height:100%;
+    border: .5px solid gray;
+    object-fit:contain;
+    transition: all 2s;
+}
+.grid img:hover{
+    transform: scale(1.1);
+}
+
+@media(min-width: 640px){
+    .grid{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,300px);
+        grid-auto-flow: row dense;    
+    }
+    .grid-item{
+        margin:0.7rem;
+    }
+    .grid-item:first-child{
+        grid-row:span 1;
+    }
+    .gallery-item:nth-child(2){
+        grid-column: 2/3;
+        grid-row: span 2;
+    }
+    .gallery-item:nth-child(6),
+    .gallery-item:nth-child(8){
+        grid-row:span 3;
+    }
+}
+
+
+@media(min-width: 960px){
+    .grid{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,auto-flow);  
+    }
+    .grid-item:first-child,
+    .gallery-item:nth-child(7),
+    .gallery-item:nth-child(8)
+    {
+        grid-column: span 2;
+        grid-row:span 1;
+    }
+    .gallery-item:nth-child(2){
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+.el-2{
+    height:304px;
+    width:108px;
+}
+.el-3{
+    size: 200px 280px;
+    
+}
+.el-4{
+    size: 180px 242px;
+    
+}
+.el-5{
+    size: 200px 280px;
+    
+}
+.el-6{
+    width:450px;
+    height:230px;
+    
+}
+.el-7{
+    width: 500px;
+}
+.el-8{
+    width:340px;
+    height:207px;  
+}
+/* ---------------------------------------About------------------------------------- */
+.About{
+    display:flex;
+    gap:40px;
+    margin:auto;
+}
+.About img{
+    padding-left: 50px;
+}
+.content{
+    width:600px;
+}
+.content h2{
+    font-weight:400;
+    color:slategrey;
+}
+.content h2,.content p{
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    line-height: 30px;
+} 
+
+.content span{
+    align-content: center;
+}
+
+/* Healthy-tips */
+.card-size{
+    size:200px;
+}
+
+/* -----------------Location & Contact------------------- */
+
+#location h2{
+    font-family: 'Josefin Slab', serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    font-weight:400;
+    color:slategrey;
+    
+    text-align:center;
+}
+
+.last{
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+}
+.last form{
+    flex:1;
+    padding-top: 30px;
+}
+.last iframe{
+    flex:1;
+}
+
+
+/* -------------------------------contact-form--------------------------- */
+.post-wrapper
+{
+    gap:20px;
+}
+
+
+
+
+/*-------------------------------------------------blog---------------------------------------- */
+
+/*
+.grid{
+    width:min-content;
+    display :grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:  auto ;
+    grid-gap:10px;
+    margin:auto;
+    grid-template-areas: 
+                        'img-7 img-7 img-2 img-2'
+                        'img-3 img-4 img-8 img-8'
+                        'img-6 img-6 img-5 img-5'; 
+} 
+/* .grid p{
+    opacity:0;
+    transition: all 1s;
+} */
+/* .el{
+    width:100%;
+    height:25rem;
+    background-position: center;
+    background-size: cover;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+}
+.el-2{
+    height:304px;
+    width:108px;
+}
+.el-3{
+    size: 200px 280px;
+    
+}
+.el-4{
+    size: 180px 242px;
+    
+}
+.el-5{
+    size: 200px 280px;
+    
+}
+.el-6{
+    width:450px;
+    height:230px;
+    
+}
+
+.el-8{
+    width:340px;
+    height:207px;  
+}
+.grid img:hover img{
+    background-color:rgba(255,255,255,.5);
+}
+/* .grid img:hover p{
+    opacity:1;
+    transform: translateX(2);
+} */ 
+/* 
+.grid a i{
+    color:rgba(255,255,255,.6);
+    font-size:medium;
+    position:relative;
+    z-index:100;
+    padding:1rem 3rem;
+    border: 2px solid rgba(255,255,255,.6);
+    border-radius: .4rem;
+    opacity: 0;
+    transition: all .5s;
+}
+.grid a::before{
+    content: '';
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    color:seashell;
+    opacity: 0;
+    transition: all .5s;
+}
+.grid a:hover i,
+.grid a:hover::before{
+    opacity:1;
+} */
