@@ -28,3 +28,6 @@ def home(request):
     # send_mail(subject, message, sender, recipients)
     # return HttpResponseRedirect('/thanks/')
 
+def service(request):
+    return render(request, "services.html")
+

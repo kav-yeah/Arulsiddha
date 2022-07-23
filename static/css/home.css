@@ -2,7 +2,7 @@
    box-sizing: border-box;
    margin:0;
    padding:0;
-   background-color: linen;
+   background-color: #ffebcd;
 }
 .container{
     width:100%;
@@ -10,6 +10,115 @@
     margin:auto;
     padding:0 1.5rem;
 }
+/* -----------------------------grid-system------------------------------- */
+.showpage{
+    position:relative;
+}
+
+#homegridrow {
+    display: inline-block;
+    overflow:hidden;
+}
+#homegridrow img{ 
+    width:1250px;
+    height:450px;
+    object-fit: cover;
+    display: block;
+  transition:all .4s;   /* smoother zoom */
+}
+#homegridrow img:hover{
+    /* backdrop-filter: blur(2px);
+    filter: blur(.5px);*/
+    transition: 1s ease;
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+}
+.appointment{
+    background:none;
+    position:absolute;
+    top:85px;
+    left:320px;
+}
+.btn{
+    position: relative;
+    left:35%;
+    border: 2px solid gray;
+    align-self: center;
+}
+.catchy{
+    position: relative;
+    padding:50px;
+    background:none;
+    font-size: 65px;
+    font-weight: 300;
+    /* background:-webkit-linear-gradient(left, #246b33, darkolivegreen,#246b33); */
+    background:-webkit-linear-gradient(left, #0b6d20,#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 5px;
+    line-height: 30px;
+
+}
+.hblogimg{
+    position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.healthytipsbody button{
+    position:absolute;
+    top: 1670px;
+    left: 600px;
+}
+  /* Create two equal columns that sits next to each other */
+/* .galleryitem{
+    width: 100%;
+    height: 100%;
+}
+.galleryitem img{
+    width:120px;
+    height:150px;
+    object-fit: cover;
+    position:absolute;
+}
+#hmimg1{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#hmimg2{
+    width:320px;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#hmimg2 img{
+    width:320px;
+} */
+/* 
+#hmimg3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#hmimg7{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+#hmimg6{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 7;
+}  */
 /* -------------------------------------header------------------------------------ */
 .logo{
     margin: auto;
@@ -208,10 +317,50 @@
     line-height: 30px;
 } 
 
-.content span{
+.content p{
+    padding:10px;
+    margin:0;
+    width:600px;
     align-content: center;
+    border: 1.5px solid #977f67; 
+    background-color:  rgba(255, 235, 205, 0.062);
+    
 }
-
+.preview-shadow{
+    background-color: rgba(221,158,94,1.2);
+    width:580px;
+    height:263px;
+    padding-left:30px;
+    padding-top:30px;
+}
+.preview{
+    position:relative;
+    background-color:  rgba(255, 235, 205, 0.7);
+}
+.dot{
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+    border: 2px solid #977f67;
+    background-color: #977f67;
+    position:absolute;
+}
+#tl{
+    top: -2.9px;
+    left: -3px;
+}
+#tr{
+    top: -2.9px;
+    right: -52px;
+}
+#bl{
+    bottom: -2.9px;
+    left :-3px
+}
+#br{
+    bottom: -2.9px;
+    right: -52px;
+}
 /* Healthy-tips */
 .card-size{
     size:200px;
