@@ -71,6 +71,7 @@
 .btn{
     position: relative;
     left:35%;
+    top:45px;
     border: 2px solid gray;
     align-self: center;
 }
