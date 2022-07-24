@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-v_ak_+q$b6lxsru!le&qew704l%ujs(d36v7&^#np8)&+*6()_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 #Email
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = 'kavyayasotha@gmail.com'
