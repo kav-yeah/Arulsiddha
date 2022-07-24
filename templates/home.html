@@ -31,12 +31,13 @@
 </head>
 <body>
     <div class="container">
+      <img class='navimg' src="{% static 'image/navbarimage.jpg' %}">
         <header>
             <div class='logo'>
                 <img class='logoimg' src="{% static 'image/siddha.jpg' %}">
                 <h2 class='title'> ARULSIDDHA <span style="font-size:small;font-weight:bolder;padding-left:43px;">CLINIC</span></h2>
             </div>
-            <div class="padding"></div>
+            <!-- <div class="padding"></div> -->
             <div class="nav">
                 <ul>
                     <a href="{% url 'home' %}"><li>Home</li></a>
@@ -58,7 +59,7 @@
         </div>
         <div class="appointment">
           <h1 class="catchy">Let’s Cure with love</h1>
-          <button type="button" class="btn btn-success">Book an appointment!</button>
+          <button type="button" class="btn btn-success" id="appointment_button">Book an appointment!</button>
         </div>
         
         </div>
@@ -66,7 +67,9 @@
 
         <div class="padding"></div>
         <div class="About">
+          <div class="IntroImg">
             <img src="{% static 'image/grid1.jpg' %}">
+          </div> 
             <div class="content">
                 <h2>Meet Dr.Katherine Daisy</h2>
                 <hr>

@@ -3,12 +3,41 @@
    margin:0;
    padding:0;
    background-color: #ffebcd;
+   /* background-image:linear-gradient(#fff,#ffebcd); */
 }
 .container{
     width:100%;
     max-width: 120rem;
     margin:auto;
     padding:0 1.5rem;
+    position:relative;
+}
+/* -------------------------------------header------------------------------------ */
+.logo{
+    position:absolute;
+    top:20px;
+    left:480px;
+    margin: auto;
+    display : flex;
+    border: 1px solid gray;
+    width:350px;
+    gap:15px;
+    margin-top: 30px;
+}
+.title{
+    font-family: 'Josefin Slab', serif;
+    align-self: center;
+    font-size: x-large;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    color: darkolivegreen;
+    letter-spacing: 2px;
+}
+.logoimg{
+    width:fit-content;
+    height:90px;
+    padding: 5px;
+    align-self: center;  
 }
 /* -----------------------------grid-system------------------------------- */
 .showpage{
@@ -36,7 +65,7 @@
 .appointment{
     background:none;
     position:absolute;
-    top:85px;
+    top:60px;
     left:320px;
 }
 .btn{
@@ -50,11 +79,13 @@
     padding:50px;
     background:none;
     font-size: 65px;
-    font-weight: 300;
+    font-weight: 1000;
+    color:#fff;
     /* background:-webkit-linear-gradient(left, #246b33, darkolivegreen,#246b33); */
-    background:-webkit-linear-gradient(left, #0b6d20,#fff);
+    /* background:-webkit-linear-gradient(left, #0b6d20,#2FF924);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    -webkit-text-stroke: 0.1px #11500b;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 5px;
     line-height: 30px;
@@ -119,30 +150,7 @@
     grid-row-start: 4;
     grid-row-end: 7;
 }  */
-/* -------------------------------------header------------------------------------ */
-.logo{
-    margin: auto;
-    display : flex;
-    border: 1px solid gray;
-    width:350px;
-    gap:15px;
-    margin-top: 30px;
-}
-.title{
-    font-family: 'Josefin Slab', serif;
-    align-self: center;
-    font-size: x-large;
-    font-weight: bold;
-    letter-spacing: 3.5px;
-    color: darkolivegreen;
-    letter-spacing: 2px;
-}
-.logoimg{
-    width:fit-content;
-    height:90px;
-    padding: 5px;
-    align-self: center;  
-}
+
 
 /*------------------------------------navbar------------------------------------------ */
 .nav ul{
@@ -163,6 +171,7 @@
 }
 
 .nav ul a:hover{
+    box-shadow: 10px 10px rgba(128, 128, 128,0.5);
     font-weight: bolder; 
     color:forestgreen;  
     border-radius: .5;
@@ -299,9 +308,15 @@
     display:flex;
     gap:40px;
     margin:auto;
+    overflow:hidden;
 }
-.About img{
+.IntroImg{
     padding-left: 50px;
+    transition:all .4s;
+}
+.IntroImg:hover{
+    transition: 1s ease;
+    transform: scale(1.1);
 }
 .content{
     width:600px;
